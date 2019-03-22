@@ -1,21 +1,27 @@
 
 
-
+const searchInput = document.querySelector("#bitcoin");
 
 
 function bitcoinDateResult() {
 
     const BASE_URL = "https://api.coindesk.com/v1/bpi/historical/close.json?for=yesterday";
-
+    console.log("Button clicked!")
+    
+    
 
 
     fetch(BASE_URL)
-    
     .then(resp => resp.json())
     .then(function(data) {
       console.log(data);
-    };
+    
+    })
+    .catch(error => console.error(error));
+};
 
+
+searchInput.addEventListener("click", bitcoinDateResult);
 
 //DUMMY DATA RESULTS TO EXPERIMENT WITH
 // const bitcoinRates = {
