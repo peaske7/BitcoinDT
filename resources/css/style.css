@@ -17,14 +17,43 @@ html {
 	text-rendering: optimizeLegibility;
 }
 
+h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #bdc3c7;
+}
 
 /*-------------------------*/
-/*        HEADER           */
+/*        BODY.            */
 /*-------------------------*/
 
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-image.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/background-image.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
+}
+
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 30%;
+	left: 90%;
+	transform: translate(-90%, -30%);
+}
+
+.text_button {
+	font-family: 'Lato', 'Arial', sans-serif;
+    border: none;
+    background-color: transparent;
+    overflow:visible; 
+    font-size:1em;
+}
+
+.input-text {
+	position: absolute;
+	width: 1140px;
+	top: 40%;
+	left: 100%;
+	transform: translate(-100%, -40%);
 }
