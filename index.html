@@ -7,16 +7,26 @@
 	<title>BitcoinDT</title>
 </head>
 <body>
-	<header>
-		<h1>Bitcoin DT</h1>
-		<p>The straight-forward approach to get bitcoin status</p>
-	</header>
+	<h1>Bitcoin DT</h1>
+	<p>The straight-forward approach to get bitcoin status</p>
 
-	<body>
-	</body>
+	<form>
+		<div>
+		    <label for="bitcoin">Choose your date (February 19th to March 21st):</label>
+		    <input type="date" id="bitcoin" name="bitcoin" value="YYYY-MM-DD" min="2019-02-19" max="2019-03-21" required>
+		    <span class="validity"></span>
+		</div>
+		<div>
+		    <input type="submit">
+		</div>
+	</form>
 
-	<footer>
-	</footer>
+	<label for="start">Start date:</label>
+
+    <input type="date" id="start" name="trip-start"
+    value="YYYY-MM-DD"
+    min="2018-01-01" max="2018-12-31">
 </body>
 
+<script type="text/javascript" src="scripts.js"></script>
 </html>
