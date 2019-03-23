@@ -19,9 +19,18 @@ function bitcoinDateResult() {
   fetch(BASE_URL)
   .then(resp => resp.json())
   .then(function(data) {
-    // let dataBitcoin = JSON.parse(data);
-    // console.log(dataBitcoin);
-  console.log(data.bpi)
+    //Narrow down the search filter to the price
+    let dataBitcoin;
+    dataBitcoin = data.bpi;
+    let dataBitcoinPrice = Object.values(dataBitcoin);
+    //Round up the price to an integer
+    let bitcoinPriceRoundUp = "$" + Math.floor(dataBitcoinPrice[0]);
+    //Target the div on the HTML file to display the price
+    document.getElementById(
+      "bitcoinPrice"
+    ).innerHTML += bitcoinPriceRoundUp;
+    
+    console.log(bitcoinPriceRoundUp);
   })
   .catch(error => console.error(error));
 };
