@@ -1,59 +1,30 @@
 
-
+//Target the submit button in the HTML doc
 const searchInput = document.querySelector("#bitcoin");
 
-
+//Run the search function when the submit button is clicked
 function bitcoinDateResult() {
+  //Gather the requested date to build our API URL
+  let bitcoinDate = " ";
+  bitcoinDate = document.getElementById("bitcoinInput").value;
+  console.log(bitcoinDate);
+  const BASE_URL =
+    "https://api.coindesk.com/v1/bpi/historical/close.json?start=" +
+    bitcoinDate +
+    "&end=" +
+    bitcoinDate;
+  console.log(BASE_URL)
 
-    const BASE_URL = "https://api.coindesk.com/v1/bpi/historical/close.json?for=yesterday";
-    console.log("Button clicked!")
-    
-    
-
-
-    fetch(BASE_URL)
-    .then(resp => resp.json())
-    .then(function(data) {
-      console.log(data);
-    
-    })
-    .catch(error => console.error(error));
+  //Fetch the API data
+  fetch(BASE_URL)
+  .then(resp => resp.json())
+  .then(function(data) {
+    // let dataBitcoin = JSON.parse(data);
+    // console.log(dataBitcoin);
+  console.log(data.bpi)
+  })
+  .catch(error => console.error(error));
 };
 
-
+//Listen for the click on the submit button
 searchInput.addEventListener("click", bitcoinDateResult);
-
-//DUMMY DATA RESULTS TO EXPERIMENT WITH
-// const bitcoinRates = {
-//     "2019-02-19": 3922.0983,
-//     "2019-02-20": 3976.79,
-//     "2019-02-21": 3936.34,
-//     "2019-02-22": 3979.995,
-//     "2019-02-23": 4145.4383,
-//     "2019-02-24": 3767.305,
-//     "2019-02-25": 3852.16,
-//     "2019-02-26": 3830.6733,
-//     "2019-02-27": 3832.26,
-//     "2019-02-28": 3826.0233,
-//     "2019-03-01": 3850.0717,
-//     "2019-03-02": 3845.1133,
-//     "2019-03-03": 3820.1467,
-//     "2019-03-04": 3732.5733,
-//     "2019-03-05": 3880.8,
-//     "2019-03-06": 3884.9983,
-//     "2019-03-07": 3891.7317,
-//     "2019-03-08": 3875.47,
-//     "2019-03-09": 3950.61,
-//     "2019-03-10": 3932.0433,
-//     "2019-03-11": 3882.615,
-//     "2019-03-12": 3891.3467,
-//     "2019-03-13": 3882.8017,
-//     "2019-03-14": 3885.9883,
-//     "2019-03-15": 3935.415,
-//     "2019-03-16": 4022.5383,
-//     "2019-03-17": 3999.6617,
-//     "2019-03-18": 4004.8117,
-//     "2019-03-19": 4033.7183,
-//     "2019-03-20": 4064.0867,
-//     "2019-03-21": 3999.3233
-// },
