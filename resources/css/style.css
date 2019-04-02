@@ -20,7 +20,10 @@ html {
 h1 {
 	font-weight: 300;
 	text-transform: uppercase;
-	color: #bdc3c7;
+	color: #fff;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 /*-------------------------*/
@@ -28,32 +31,122 @@ h1 {
 /*-------------------------*/
 
 body {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/background-image.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(103, 142, 244, 0.5)), url("../img/background-image.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
 }
 
+/*-------------------------*/
+/*        Header           */
+/*-------------------------*/
+
 .hero-text-box {
 	position: absolute;
-	width: 1140px;
-	top: 30%;
-	left: 90%;
-	transform: translate(-90%, -30%);
+    width: auto;
+    top: 25%;
+    left: 19%;
+    color: #fff;
 }
 
-.text_button {
+.nav img {
+    margin-top: 5px;
+    margin-left: 15px;
+    height: 85px;
+    float: left;
+}
+
+/*-------------------------*/
+/*        Buttons          */
+/*-------------------------*/
+
+.text-button,
+.input-text,
+#bitcoinPrice {
+    color: #fff;
+}
+
+.text-button {
 	font-family: 'Lato', 'Arial', sans-serif;
     border: none;
     background-color: transparent;
     overflow:visible; 
     font-size:1em;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+
+.submit-button {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
 .input-text {
-	position: absolute;
-	width: 1140px;
-	top: 40%;
-	left: 100%;
-	transform: translate(-100%, -40%);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#bitcoinPrice {
+    text-align: center;
+    
+}
+
+/*-------------------------*/
+/*        Larger-box       */
+/*-------------------------*/
+
+.larger-box {
+    position: absolute;
+    top: 45%;
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgba(222, 230, 253, 0.5);
+    border: 1px solid #DEE6FD;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #becefb;
+}
+
+.foreword p {
+    font-size: 85%;
+    line-height: 110%;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 5px 10px;
+    background-color: rgba(190, 206, 251, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #becefb;
+}
+
+/*-------------------------*/
+/*        Button           */
+/*-------------------------*/
+
+.text-button:hover,
+.text-button:active {
+    color: #d5d5d5;
+    font-weight: 300;
+    border-bottom: 1px solid #d5d5d5;
+    transition: font-weight 0.2s, border-bottom 0.2s, color 0.2s;
+    outline: none;
+}
+
+/*-------------------------*/
+/*        Footer           */
+/*-------------------------*/
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 5px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 70%;
+    text-align: center;
 }

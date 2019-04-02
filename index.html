@@ -5,31 +5,66 @@
 	<meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
 	<title>BitcoinDT</title>
 </head>
+
 <body>
-	<div class="hero-text-box">
-<!-- Add a BitcoinDT icon -->
+	<header>
+        <div class="row">
+            <div class="nav">
+                <a href="index.html"><img src="resources/img/BitcoinDT-logo.png" alt="website logo"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="hero-text-box">
+                <!-- Add a BitcoinDT icon -->
+                <h1>The easiest way to know your essentials</h1>
+            </div>
+        </div>
+    </header>
 
-		<h1>The easiest way to know your essentials</h1>
+	<section>
+		<div class="row">
+			<div class="larger-box">
+				<div class="foreword">
+					<p>
+                        Get the Bitcoin value of your desired date, now.
+                        <br>Simply choose your date and press submit.
+                        <br>The number you were looking for will apear. 
+                    </p>
+				</div>
 
-	</div>
+				<div class="input-text">
+				    <label for="bitcoin">Choose your date:</label>
+				    <input type="date" id="bitcoinInput" name="bitcoin" value="2019-03-21" min="2015-12-31" required>
+				    <span class="validity"></span>
+				</div>
 
-	<!-- Display Bitcoin Price result -->
-	<div id="bitcoinPrice">
+				<!-- Display Bitcoin Price result -->
+				<div id="bitcoinPrice">
+					<p>Put results here</p>
+				</div>
 
-	</div>
-	
-		<div class="input-text">
-		    <label for="bitcoin">Choose your date:</label>
-		    <input type="date" id="bitcoinInput" name="bitcoin" value="2019-03-21" min="2015-12-31" required>
-		    <span class="validity"></span>
+				<div class="submit-button">
+					<!-- trying to make the buttons look better -->
+				    <input type="submit" id="bitcoin" value="Click to enter" style="font-family: 'Lato'; font-weight: 300;" class="text-button">
+					    <!-- <a href="#" onclick="../resources/js/scripts/submit()">Link</a> -->
+				</div>
+			</div>
 		</div>
-		<div>
-<!-- trying to make the buttons look better -->
-		    <input type="submit" id="bitcoin" value="Click to enter" style="font-family: 'Lato'; font-weight: 300;" class="text_button">
-		    <!-- <a href="#" onclick="../resources/js/scripts/submit()">Link</a> -->
-		</div>
+	</section>
+
+	<footer>
+        <div class="row">
+            <p>
+                For more information, conact us at any of the social media links posted above.
+                <br>Copyright &copy; Usapiff and DrPoppyseed. All rights reserved.
+            </p>
+        </div>
+    </footer>
 	
 </body>
 
