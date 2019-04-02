@@ -28,7 +28,7 @@ function bitcoinDateResult() {
     //Target the div on the HTML file to display the price
     document.getElementById(
       "bitcoinPrice"
-    ).innerHTML += bitcoinPriceRoundUp;
+    ).innerHTML = bitcoinPriceRoundUp;
     
     console.log(bitcoinPriceRoundUp);
   })
