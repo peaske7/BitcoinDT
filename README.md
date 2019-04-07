@@ -1,2 +1,4 @@
 # BitcoinDT
-gets the bitcoin price for the specific date inputted by the user
+BitcoinDT is a user-friendly website that provides the user with the chosen date's Bitcoin price
+
+Authors: Usapiff (Nick) and DrPoppyseed (Jay)

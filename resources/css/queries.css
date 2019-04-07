@@ -1,0 +1,100 @@
+
+
+
+/*from big tablets to 1200 (widths smaller than 1140px row*/
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+	    position: absolute;
+	    width: auto;
+	    top: 25%;
+	    left: 10%;
+	    color: #fff;
+	}
+
+	.larger-box {
+	    margin-left: 25%;
+	}
+}
+
+/*small tablets to big tablets: from 768 to 1023px*/
+@media only screen and (max-width: 1040px) {
+	/*body { font-size: 90%; }*/
+
+    .hero-text-box {
+	    top: 20%;
+	    left: 17%;
+	}
+
+	h1 {
+	    word-spacing: 2px;
+	    letter-spacing: 1px;
+	    margin-bottom: 10px;
+	}
+
+}
+
+/*small phones to small tablets: from 481 to 767px*/
+@media only screen and (max-width: 796px) {
+	body { font-size: 90%; }
+
+    .hero-text-box {
+	    top: 18%;
+	    left: 12%;
+	}
+
+	.larger-box {
+	    margin-left: 18%;
+	}
+
+	.nav img {
+	    height: 60px;
+	}
+
+}
+
+@media only screen and (max-width: 695px) {
+	.larger-box {
+	    margin-left: 14%;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	body { font-size: 90%; }
+	/*body h1 { font-size: 90%; }*/
+
+	.hero-text-box {
+	    left: 7%;
+	}
+
+	.larger-box {
+	    margin-left: 7%;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.hero-text-box {
+		margin-left: 3%;
+		font-size: 80%;
+	}
+
+	.larger-box {
+		margin-left: 10%;
+	    width: 400px;
+	}
+
+	#bitcoinPrice {
+		margin-left: 32%;
+	}
+}
+
+/*small phones: from 0 to 480px*/
+@media only screen and (max-width: 480px) {
+	.hero-text-box {
+		margin-left: auto;
+		font-size: 90%;
+	}
+
+	.larger-box {
+		margin-left: 4%;
+	}
+}

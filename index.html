@@ -1,72 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, install-scale=1.0">
+        <meta name="description" content="Stay up-to-date with Bitcoin prices with the specially designed UX of BitcoinDT. Get all the imformation you need on the click of a button.">
 
-<head>
-	<meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-	<title>BitcoinDT</title>
-</head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
 
-<body>
-	<header>
-        <div class="row">
-            <div class="nav">
-                <a href="index.html"><img src="resources/img/BitcoinDT-logo.png" alt="website logo"></a>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137869211-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-137869211-1');
+        </script>
+
+        <title>BitcoinDT</title>
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <div class="nav">
+                    <a href="index.html"><img src="resources/img/BitcoinDT-logo.png" alt="website logo"></a>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="hero-text-box">
-                <!-- Add a BitcoinDT icon -->
-                <h1>The easiest way to know your essentials</h1>
+            <div class="row">
+<!--                Largest text on the page that's above the functionality box-->
+                <div class="hero-text-box">
+                    <h1>The easiest way to know your essentials</h1>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+        
+        <section>
+            <div class="row">
+<!--                Closed off box with all the components the user interacts with-->
+                <div class="larger-box">
+                    <div class="foreword">
+                        <p>
+                            Get the Bitcoin value of your desired date, now.
+                            <br>Simply choose your date and press submit.
+                            <br>The number you were looking for will apear. 
+                        </p>
+                    </div>
 
-	<section>
-		<div class="row">
-			<div class="larger-box">
-				<div class="foreword">
-					<p>
-                        Get the Bitcoin value of your desired date, now.
-                        <br>Simply choose your date and press submit.
-                        <br>The number you were looking for will apear. 
-                    </p>
-				</div>
+                    <div class="input-text">
+                        <label for="bitcoin">Choose your date:</label>
+                        <input type="date" id="bitcoinInput" name="bitcoin" value="" min="2015-12-31" required>
+                        <span class="validity"></span>
+                    </div>
 
-				<div class="input-text">
-				    <label for="bitcoin">Choose your date:</label>
-				    <input type="date" id="bitcoinInput" name="bitcoin" value="" min="2015-12-31" required>
-				    <span class="validity"></span>
-				</div>
+                    <div id="bitcoinPrice">
+                        <p>&nbsp;</p>
+                    </div>
 
-				<!-- Display Bitcoin Price result -->
-				<div id="bitcoinPrice">
-					<p>&nbsp;</p>
-				</div>
+                    <div class="submit-button">
+                        <input type="submit" id="bitcoin" value="Click to enter" style="font-family: 'Lato'; font-weight: 300;" class="text-button">
+                            <!-- <a href="#" onclick="../resources/js/scripts/submit()">Link</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<div class="submit-button">
-					<!-- trying to make the buttons look better -->
-				    <input type="submit" id="bitcoin" value="Click to enter" style="font-family: 'Lato'; font-weight: 300;" class="text-button">
-					    <!-- <a href="#" onclick="../resources/js/scripts/submit()">Link</a> -->
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer>
-        <div class="row">
-            <p>
-                For more information, conact us at any of the social media links posted above.
-                <br>Copyright &copy; Usapiff and DrPoppyseed. All rights reserved.
-            </p>
-        </div>
-    </footer>
-	
-</body>
-
-<script type="text/javascript" src="./resources/scripts.js"></script>
-</head>
+        <footer>
+            <div class="row">
+                <p>
+                    For more information, conact us at any of the social media links posted above.
+                    <br>Copyright &copy; Usapiff and DrPoppyseed. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    <script type="text/javascript" src="./resources/scripts.js"></script>	
+    </body>
+</html>
