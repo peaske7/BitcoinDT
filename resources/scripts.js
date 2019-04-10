@@ -4,10 +4,23 @@ const searchInput = document.querySelector("#bitcoin");
 
 //Run the search function when the submit button is clicked
 function bitcoinDateResult() {
+  //Get today's date in YYYY-MM-DD format
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  let currentMonth = currentDate.getMonth() < 10 ?  "0" + (currentDate.getMonth() + 1) : currentDate.getMonth() + 1;
+  let currentDay = currentDate.getDate() < 10 ? "0" + currentDate.getDate() : currentDate.getDate();
+  let today = currentYear + "-" + currentMonth + "-" + currentDay;
+  console.log("today is " + today);
+  
   //Gather the requested date to build our API URL
   let bitcoinDate = " ";
   bitcoinDate = document.getElementById("bitcoinInput").value;
   console.log(bitcoinDate);
+
+  //Check if requested date is in the future or not
+  if(bitcoinDate > today) {
+    alert("I can't predict the future!");
+  } else {
   const BASE_URL =
     "https://api.coindesk.com/v1/bpi/historical/close.json?start=" +
     bitcoinDate +
@@ -33,6 +46,7 @@ function bitcoinDateResult() {
     console.log(bitcoinPriceRoundUp);
   })
   .catch(error => console.error(error));
+}
 };
 
 //Listen for the click on the submit button
